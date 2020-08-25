@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DFF7715-20C5-4C6A-BBB6-47B59D45DB67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMSS</RootNamespace>
+    <AssemblyName>SMSS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\vs file\系统改良2\系统改良\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\server\\soil\</InstallUrl>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SMSS.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicInterop, Version=0.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicInterop.0.7.4\lib\net40\DynamicInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MLApp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.MLApp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\DEM_Rectangle_Beta\DEM_Rectangle_Beta\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\R.NET.Community.1.6.5\lib\net40\RDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet.NativeLibrary, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\R.NET.Community.1.6.5\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\AuxiliaryFunc.cs" />
+    <Compile Include="Data\Config.cs" />
+    <Compile Include="Data\FreeContainer.cs" />
+    <Compile Include="Data\Initialize.cs" />
+    <Compile Include="Data\InputData.cs" />
+    <Compile Include="Data\Parameter.cs" />
+    <Compile Include="Data\OutputData.cs" />
+    <Compile Include="Function\Distance_Fomula.cs" />
+    <Compile Include="Function\match\MatchDis.cs" />
+    <Compile Include="Function\match\Histogram\HistogramDis.cs" />
+    <Compile Include="Function\match\Histogram\HistCalculate.cs" />
+    <Compile Include="Function\match\MatchAccuracy.cs" />
+    <Compile Include="Function\PreSolve\Presolution.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainFormContainers.cs" />
+    <Compile Include="Windows\MatchForms\WavecharForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\MatchForms\WavecharForm.Designer.cs">
+      <DependentUpon>WavecharForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TrainForms\WaveCharTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\TrainForms\WaveCharTrain.Designer.cs">
+      <DependentUpon>WaveCharTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TrainForms\WaveShapeTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\TrainForms\WaveShapeTrain.Designer.cs">
+      <DependentUpon>WaveShapeTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Presolution\DeriveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Presolution\DeriveForm.Designer.cs">
+      <DependentUpon>DeriveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TrainForms\SATrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\TrainForms\SATrain.Designer.cs">
+      <DependentUpon>SATrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TrainForms\HistogramTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\TrainForms\HistogramTrain.Designer.cs">
+      <DependentUpon>HistogramTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MatchForms\HistogramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\MatchForms\HistogramForm.Designer.cs">
+      <DependentUpon>HistogramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Presolution\NormalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Presolution\NormalForm.Designer.cs">
+      <DependentUpon>NormalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Presolution\SmoothForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Presolution\SmoothForm.Designer.cs">
+      <DependentUpon>SmoothForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\Waiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\Waiting.Designer.cs">
+      <DependentUpon>Waiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Visualization\ShowPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Visualization\ShowPDF.Designer.cs">
+      <DependentUpon>ShowPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\Mail.Designer.cs">
+      <DependentUpon>Mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MatchForms\SpecAngleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\MatchForms\SpecAngleForm.Designer.cs">
+      <DependentUpon>SpecAngleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MatchForms\WaveshapeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\MatchForms\WaveshapeForm.Designer.cs">
+      <DependentUpon>WaveshapeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Visualization\ShowCurve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Visualization\ShowCurve.Designer.cs">
+      <DependentUpon>ShowCurve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Visualization\ShowHistogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Visualization\ShowHistogram.Designer.cs">
+      <DependentUpon>ShowHistogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowsRefresh\GetView.cs" />
+    <Compile Include="Data\FileBrowser.cs" />
+    <Compile Include="Windows\WindowsRefresh\AddTreeView.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\match\SpecAngel.cs" />
+    <Compile Include="Function\match\WaveShape.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Windows\MatchForms\WavecharForm.resx">
+      <DependentUpon>WavecharForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\TrainForms\WaveCharTrain.resx">
+      <DependentUpon>WaveCharTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\TrainForms\WaveShapeTrain.resx">
+      <DependentUpon>WaveShapeTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\WindowsRefresh\ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Presolution\DeriveForm.resx">
+      <DependentUpon>DeriveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\TrainForms\SATrain.resx">
+      <DependentUpon>SATrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\TrainForms\HistogramTrain.resx">
+      <DependentUpon>HistogramTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\MatchForms\HistogramForm.resx">
+      <DependentUpon>HistogramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Presolution\NormalForm.resx">
+      <DependentUpon>NormalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Visualization\ShowPDF.resx">
+      <DependentUpon>ShowPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\WindowsRefresh\Mail.resx">
+      <DependentUpon>Mail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\MatchForms\SpecAngleForm.resx">
+      <DependentUpon>SpecAngleForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\MatchForms\WaveshapeForm.resx">
+      <DependentUpon>WaveshapeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Visualization\ShowCurve.resx">
+      <DependentUpon>ShowCurve.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Visualization\ShowHistogram.resx">
+      <DependentUpon>ShowHistogram.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Presolution\SmoothForm.resx">
+      <DependentUpon>SmoothForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\WindowsRefresh\Waiting.resx">
+      <DependentUpon>Waiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\WindowsRefresh\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.12.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ 2013 运行库%28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxesriControls">
+      <Guid>{033364CA-47F9-4251-98A5-C88CD8D3C808}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxesriPublisherControls">
+      <Guid>{FBB2DAD5-39B5-464C-8351-A0499BE62DC5}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MIMEEDIT">
+      <Guid>{1C82EAD8-508E-11D1-8DCF-00C04FB951F9}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
